@@ -14,10 +14,10 @@
     },
     "autoload": {
         "files": [
-            "./config/helpers.php"
+            "app/helpers.php"
         ],
         "psr-4": {
-            "App\\": "config"
+            "App\\": "app"
         }
     }
 }
