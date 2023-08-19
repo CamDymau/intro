@@ -1,43 +1,7 @@
-# phpstorm project files
 .idea
-# netbeans project files
-nbproject
-# zend studio for eclipse project files
-.buildpath
-.project
-.settings
-# windows thumbnail cache
-Thumbs.db
-# composer vendor dir
+
 /vendor
-# composer itself is not needed
-composer.phar
-composer.json
-composer.lock
 
-# Mac DS_Store Files
-.DS_Store
+/storage/cache
 
-# phpunit itself is not needed
-phpunit.phar
-# local phpunit config
-/phpunit.xml
-
-.testmaindb
-.debug
-
-/.vagrant/
-
-.built
-.start
-.create
-
-#user_doc:E0b8t1480dU165l
-.htpasswd
-
-# не нужный файл
-./web/docs.html
-
-# env
 /.env
-.gitconfig
