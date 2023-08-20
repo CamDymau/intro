@@ -2,14 +2,17 @@
 
 namespace App\Http\controllers;
 
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
+use App\Support\View;
 
 final class MainController extends BaseController
 {
-    public function index(Request $request, Response $response)
+    public function index(View $view)
     {
-        $response->getBody()->write("Hello world!");
-        return $response;
+        return $view('auth.home');
+    }
+
+    public function home(View $view)
+    {
+        return $view('home.index');
     }
 }
