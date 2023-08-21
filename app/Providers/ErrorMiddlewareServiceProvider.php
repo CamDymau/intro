@@ -2,17 +2,15 @@
 
 namespace App\Providers;
 
-use App\Support\Route;
+use Zeuxisoo\Whoops\Slim\WhoopsMiddleware;
 
 final class ErrorMiddlewareServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->addErrorMiddleware(
-            config('middleware.errorDetails.displayErrorDetails'),
-            config('middleware.errorDetails.logErrors'),
-            config('middleware.errorDetails.logErrorDetails'),
-        );
+        if (env('DEBUG')) {
+            $this->app->add(new WhoopsMiddleware());
+        }
     }
 
     public function boot()

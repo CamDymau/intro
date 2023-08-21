@@ -5,14 +5,15 @@
         "nyholm/psr7": "^1.8",
         "nyholm/psr7-server": "^1.0",
         "guzzlehttp/psr7": "2",
-        "jenssegers/blade": "^1.2",
-        "php": "^8.1",
+        "jenssegers/blade": "^v1.4.0",
+        "php": "^8.0",
         "ext-curl": "*",
         "ext-json": "*",
         "php-di/php-di": "^6.0",
-        "php-di/slim-bridge": "^3.0",
-        "illuminate/support": "^7.0.0",
-        "illuminate/database": "^7.4"
+        "php-di/slim-bridge": "^3",
+        "illuminate/support": "^8",
+        "illuminate/database": "^8",
+        "zeuxisoo/slim-whoops": "^0.7.2"
     },
     "autoload": {
         "files": [
