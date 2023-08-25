@@ -14,3 +14,15 @@ services:
     image: php:8.0-fpm
     volumes:
       - .:/var/www
+
+  postgres:
+    image: postgres:15.4-alpine
+    environment:
+      POSTGRES_DB: "maindb"
+      POSTGRES_USER: "docker_user"
+      POSTGRES_PASSWORD: "docker_password"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    volumes:
+      - .:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
