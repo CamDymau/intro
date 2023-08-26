@@ -2,14 +2,14 @@
 
 namespace App\Http\controllers;
 
+use App\Models\User;
 use App\Support\View;
-use Illuminate\Database\Capsule\Manager as Capsule;
 
 final class MainController extends BaseController
 {
-    public function index(View $view, Capsule $db)
+    public function index(View $view)
     {
-//        var_dump($db->table('main_scheme.users')->find(1));die();
+        echo User::find(1);
         return $view('auth.home');
     }
 

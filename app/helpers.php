@@ -25,6 +25,17 @@ if (!function_exists('base_path')) {
     }
 }
 
+if (!function_exists('env'))
+{
+    function env($key, $default = false)
+    {
+        $value = getenv($key);
+
+        throw_when(!$value and !$default, "{$key} is not a defined .env variable and has not default value");
+
+        return $value or $default;
+    }
+}
 
 if (!function_exists('database_path')) {
     function database_path($path = '')

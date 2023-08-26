@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>
-            Slim 4 Authentication
+            Slim 4
         </title>
     </head>
     <body>

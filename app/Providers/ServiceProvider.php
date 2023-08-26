@@ -13,6 +13,7 @@ abstract class ServiceProvider
     final public function __construct(App $app)
     {
         $this->app = $app;
+        $this->container = $this->app->getContainer();
     }
 
     abstract public function register();

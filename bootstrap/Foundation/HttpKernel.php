@@ -19,6 +19,5 @@ class HttpKernel extends Kernel
         Bootstrappers\LoadHttpMiddleware::class,
         Bootstrappers\LoadServiceProviders::class,
         Bootstrappers\LoadDebuggingPage::class,
-        Bootstrappers\LoadAliases::class,
     ];
 }

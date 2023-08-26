@@ -5,13 +5,14 @@ return [
 
     'connections' => [
         'postgresql' => [
-            'driver' => 'postgresql',
-            'url' => getenv('PG_URL'),
-            'host' => getenv('PG_HOST'),
-            'port' => getenv('PG_PORT'),
-            'database' => getenv('PG_DATABASE'),
-            'username' => getenv('PG_USERNAME'),
-            'password' => getenv('PG_PASSWORD'),
+            'driver' => 'pgsql',
+            'url' => env('PG_DB_URL'),
+            'host' => env('PG_DB_HOST'),
+            'port' => env('PG_DB_PORT'),
+            'database' => env('PG_DB_DATABASE'),
+            'username' => env('PG_DB_USERNAME'),
+            'password' => env('PG_DB_PASSWORD'),
+            'prefix' => '',
         ],
     ],
 ];
