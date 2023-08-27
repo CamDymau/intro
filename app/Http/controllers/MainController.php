@@ -9,7 +9,7 @@ final class MainController extends BaseController
 {
     public function index(View $view)
     {
-        echo User::find(1);
+//        echo User::find(1);
         return $view('auth.home');
     }
 

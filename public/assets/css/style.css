@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700;800&display=swap');
+
+*, head, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+:root {
+    --border-gradient: linear-gradient(to right,
+    #5F86F2FF,
+    #A65FF2FF,
+    #F25FD0FF,
+    #F25F61FF,
+    #F2CB5FFF,
+    #ABF25FFF,
+    #5FF281FF,
+    #5FF2F0FF);
+    --angle: 45deg;
+    --opacity: 0.5;
+}
+
+.container {
+    padding: 0;
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.flex {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.jce {
+    justify-content: end;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+.aic {
+    align-items: center;
+}
+
+.aie {
+    align-items: end;
+}
+
+.tac {
+    text-align: center;
+}
+
+.tae {
+    text-align: end;
+}
+
+header {
+    width: calc(100% - 10);
+    height: 100px;
+    border: 5px solid;
+    border-image: var(--border-gradient) 8;
+}
+
+video {
+    position: absolute;
+    z-index: -2;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.text-gradient {
+    background-image: var(--border-gradient);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-gradient-border {
+    width: 150px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    background: none;
+    border: 5px solid;
+    cursor: pointer;
+    border-image: var(--border-gradient) 8;
+    transition: 0.5s;
+    font-weight: 800;
+    font-size: 1.5em;
+}
+
+.btn-gradient-border:hover {
+    border-radius: 15px;
+}
+
+.volume-changer {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.volume-changer::-webkit-slider-container {
+    background: var(--border-gradient);
+}
+
+.volume-changer::-webkit-slider-runnable-track {
+    height: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.volume-changer::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -2px;
+    background-color: white;
+    height: 1em;
+    width: 0.5em;
+}
+
+/**  */

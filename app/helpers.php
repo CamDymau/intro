@@ -7,7 +7,7 @@ use Illuminate\Support\Collection;
 if (!function_exists('asset')) {
     function asset($path)
     {
-        return env('APP_URL') . "/{$path}";
+        return "/../public/assets/{$path}";
     }
 }
 

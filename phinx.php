@@ -1,5 +1,6 @@
 <?php
-
+// php -d extension=pgsql -d extension=pdo_pgsql vendor/bin/phinx migrate
+// php -d extension=pgsql -d extension=pdo_pgsql vendor/bin/phinx seed:run -s Users -s Friends -s Messages -s TextMessages -s News -s Comments
 return [
     'paths' => [
         'migrations' => database_path('migrations'),

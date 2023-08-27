@@ -3,11 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+
 final class User extends Model
 {
     protected $table = 'main_scheme.users';
     protected $fillable = [
-        'id',
-        'name'
+        'name',
+        'second_name',
+        'login',
+        'password',
+        'photo',
+        'birth_date',
+        'created_date',
     ];
 }
