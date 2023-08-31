@@ -1,32 +1,57 @@
 $(document).ready(function () {
     const progressBar = $('.video-changer');
     const video = $('.bg-video')[0];
+    const audio = $('.audio-click')[0];
+
+    $(document).click(function () {
+        audio.play();
+    });
+
+    let durationMinutes = Math.floor(video.duration / 60);
+    let durationSeconds = Math.floor(video.duration - durationMinutes * 60);
+
+    $('.duration').html(`${durationMinutes}:${durationSeconds}`);
+
+    video.addEventListener('timeupdate', setCurrentTimeText)
 
     progressBar.on('click', function () {
-        video.currentTime = progressBar.val();
+        video.currentTime = video.duration * progressBar.val() / 100;
+    });
+
+    $('.volume-changer').on('mousemove', function () {
+        video.volume = parseFloat(this.value / 10);
     });
 
     $('.btn-pause').on('click', function () {
+        let text = $(this).find('.text-gradient');
+
         if (video.paused) {
             video.play();
-            $(this).find('.text-gradient').html('stop');
+            text.html('stop');
         } else {
             video.pause();
-            $(this).find('.text-gradient').html('play');
+            text.html('play');
         }
     });
 
     $('.btn-mute').on('click', function () {
+        let text = $(this).find('.text-gradient');
+
         if (video.muted) {
             video.muted = false;
-            $(this).find('.text-gradient').html('mute');
+            audio.muted = false;
+            text.html('mute');
         } else {
             video.muted = true;
-            $(this).find('.text-gradient').html('unmute');
+            audio.muted = true;
+            text.html('unmute');
         }
     });
 
-    $('.volume-changer').mousemove(function () {
-        video.volume = parseFloat(this.value / 10);
-    });
+    function setCurrentTimeText() {
+        let currentMinutes = Math.floor(video.currentTime / 60);
+        let currentSeconds = Math.floor(video.currentTime - currentMinutes * 60);
+
+        $('.current').html(`${currentMinutes}:${currentSeconds < 10 ? '0' + currentSeconds : currentSeconds}`);
+    }
 });
