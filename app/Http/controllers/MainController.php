@@ -10,7 +10,7 @@ final class MainController extends BaseController
     public function index(View $view)
     {
 //        echo User::find(1);
-        return $view('auth.register');
+        return $view('auth.authForm');
     }
 
     public function home(View $view)

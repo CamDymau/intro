@@ -2,6 +2,7 @@ $(document).ready(function () {
     const progressBar = $('.video-changer');
     const video = $('.bg-video')[0];
     const audio = $('.audio-click')[0];
+    audio.volume = 0.1;
 
     $(document).click(function () {
         audio.play();
@@ -16,6 +17,7 @@ $(document).ready(function () {
 
     progressBar.on('click', function () {
         video.currentTime = video.duration * progressBar.val() / 100;
+        setProgressBarPosition();
     });
 
     $('.volume-changer').on('mousemove', function () {
@@ -39,11 +41,9 @@ $(document).ready(function () {
 
         if (video.muted) {
             video.muted = false;
-            audio.muted = false;
             text.html('mute');
         } else {
             video.muted = true;
-            audio.muted = true;
             text.html('unmute');
         }
     });
@@ -51,7 +51,12 @@ $(document).ready(function () {
     function setCurrentTimeText() {
         let currentMinutes = Math.floor(video.currentTime / 60);
         let currentSeconds = Math.floor(video.currentTime - currentMinutes * 60);
+        setProgressBarPosition();
 
         $('.current').html(`${currentMinutes}:${currentSeconds < 10 ? '0' + currentSeconds : currentSeconds}`);
+    }
+
+    function setProgressBarPosition(){
+        progressBar[0].value = (video.currentTime / video.duration) * 100
     }
 });

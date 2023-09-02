@@ -1,0 +1,53 @@
+.main-auth-form {
+    margin: 50px auto;
+    width: 800px;
+    height: 600px;
+    border: 5px solid;
+    border-image: var(--border-gradient-right) 8;
+}
+
+.btn-reg, .btn-auth {
+    height: 70px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 5px solid;
+    border-image: var(--border-gradient-right) 8;
+    font-size: 25px;
+    font-weight: 800;
+    transition: 2s;
+}
+
+.btn-activate {
+    width: 60%;
+    font-size: 30px;
+}
+
+.btn-not-activate {
+    width: 40%;
+    font-size: 25px;
+}
+
+.btn-reg:hover, .btn-auth:hover {
+    border: 5px solid white;
+}
+
+.register-from {
+    display: block;
+    height: 100%;
+}
+
+.form-input, .form-button {
+    display: block;
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin: 20px;
+    border: 3px solid;
+    border-image: var(--border-gradient-right) 8;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.form-button {
+    cursor: pointer;
+    text-transform: uppercase;
+}
