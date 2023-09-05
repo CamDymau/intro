@@ -31,8 +31,7 @@
     border: 5px solid white;
 }
 
-.register-from {
-    display: block;
+.register-form, .auth-form {
     height: 100%;
 }
 

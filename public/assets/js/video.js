@@ -8,10 +8,12 @@ $(document).ready(function () {
         audio.play();
     });
 
-    let durationMinutes = Math.floor(video.duration / 60);
-    let durationSeconds = Math.floor(video.duration - durationMinutes * 60);
+    video.addEventListener("loadedmetadata", () => {
+        let durationMinutes = Math.floor(video.duration / 60);
+        let durationSeconds = Math.floor(video.duration - durationMinutes * 60);
 
-    $('.duration').html(`${durationMinutes}:${durationSeconds}`);
+        $('.duration').html(`${durationMinutes}:${durationSeconds}`);
+    });
 
     video.addEventListener('timeupdate', setCurrentTimeText)
 
