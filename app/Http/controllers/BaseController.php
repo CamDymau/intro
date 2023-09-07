@@ -18,4 +18,19 @@ abstract class BaseController
 
         return $response;
     }
+
+    protected function getGet()
+    {
+        return $_GET;
+    }
+
+    protected function getPost()
+    {
+        return $_POST;
+    }
+
+    protected function getRequest()
+    {
+        return $_REQUEST;
+    }
 }

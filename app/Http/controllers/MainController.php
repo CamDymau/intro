@@ -4,6 +4,7 @@ namespace App\Http\controllers;
 
 use App\Models\User;
 use App\Support\View;
+use Psr\Http\Message\ResponseInterface as Response;
 
 final class MainController extends BaseController
 {
@@ -17,9 +18,5 @@ final class MainController extends BaseController
     public function home(View $view)
     {
         return $view('home.index');
-    }
-
-    public function auth(){
-        dd($_POST);
     }
 }

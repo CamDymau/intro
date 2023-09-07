@@ -14,25 +14,25 @@
                 sign in
             </div>
         </div>
-        <form method="post" class="register-form">
+        <form class="register-form">
             <input type="text" name="name" placeholder="Name" value required class="form-input text-gradient" max="100">
             <input type="text" name="second_name" placeholder="Second Name" class="form-input text-gradient" max="100">
             <input type="text" name="login" placeholder="Login" required class="form-input text-gradient" max="50">
             <input type="date" name="birth_date" placeholder="dd.mm.yyyy" class="form-input text-gradient">
             <input type="password" name="password" placeholder="Password" required class="form-input text-gradient">
 
-            <button type="submit" class="form-button text-gradient">
+            <div class="form-button tac text-gradient aie btn-reg-submit">
                 sign up
-            </button>
+            </div>
         </form>
 
-        <form method="post" class="auth-form display-none">
+        <form class="auth-form display-none">
             <input type="text" name="login" placeholder="Login" required class="form-input text-gradient" max="50">
             <input type="password" name="password" placeholder="Password" required class="form-input text-gradient">
 
-            <button type="submit" class="form-button text-gradient aie">
+            <div class="form-button tac text-gradient aie btn-auth-submit">
                 sign in
-            </button>
+            </div>
         </form>
     </div>
 

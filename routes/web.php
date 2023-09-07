@@ -3,5 +3,9 @@
 use App\Support\Route;
 
 Route::get('/', 'MainController@index');
-Route::post('/', 'MainController@auth');
 Route::get('/home', 'MainController@home');
+
+/** POST */
+
+Route::post('/authorization', 'AuthController@authorization');
+Route::post('/registration', 'AuthController@registration');
