@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace App\Http\Providers;
 
 use App\Support\View;
 use Slim\Psr7\Factory\ResponseFactory;

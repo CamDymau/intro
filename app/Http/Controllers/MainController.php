@@ -1,17 +1,15 @@
 <?php
 
-namespace App\Http\controllers;
+namespace App\Http\Controllers;
 
-use App\Models\User;
 use App\Support\View;
-use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 
 final class MainController extends BaseController
 {
-    public function index(View $view)
+    public function index(View $view, ServerRequestInterface $request, ResponseInterface $response)
     {
-//        dd($request);
-//        echo User::find(1);
         return $view('auth.authForm');
     }
 

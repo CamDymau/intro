@@ -28,7 +28,6 @@ final class View
      */
     public function __invoke(string $template = '', array $with = []): ResponseInterface
     {
-
         $cache = config('blade.cache');
         $views = config('blade.views');
 

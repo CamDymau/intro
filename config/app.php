@@ -1,9 +1,9 @@
 <?php
 return [
     'providers' => [
-        \App\Providers\EnvironmentServiceProvider::class,
-        \App\Providers\RouteServiceProvider::class,
-        \App\Providers\BladeServiceProvider::class,
-        \App\Providers\DatabaseServiceProviders::class,
+        \App\Http\Providers\EnvironmentServiceProvider::class,
+        \App\Http\Providers\RouteServiceProvider::class,
+        \App\Http\Providers\BladeServiceProvider::class,
+        \App\Http\Providers\DatabaseServiceProviders::class,
     ],
 ];

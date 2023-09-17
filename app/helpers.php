@@ -25,8 +25,18 @@ if (!function_exists('base_path')) {
     }
 }
 
-if (!function_exists('env'))
-{
+if (!function_exists('session')) {
+    function session($key = false, $value = false)
+    {
+        if (!$value) {
+            return $_SESSION[$key];
+        }
+
+        return $_SESSION[$key] = $value;
+    }
+}
+
+if (!function_exists('env')) {
     function env($key, $default = false)
     {
         $value = getenv($key);

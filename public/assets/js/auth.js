@@ -5,6 +5,8 @@ $(document).ready(function () {
     const btnAuthSubmit = $('.btn-auth-submit');
     const register = $('.register-form');
     const auth = $('.auth-form');
+    const errorBlock = $('.error-block');
+    const errorText = $('.text-error');
 
     btnAuth.on('click', function () {
         changeForm(btnAuth, auth, register)
@@ -42,11 +44,14 @@ $(document).ready(function () {
     }
 
     function sendSignRequest(route, formData) {
-        console.log(formData);
-
         $.post(route, formData.serialize(), function (data) {
-            console.log(data)
+            if (!data.result) {
+                errorBlock.show();
+                errorText.html(data.message);
+            } else {
+                window.location = data.redirect;
+                errorBlock.hide();
+            }
         });
     }
-
 });

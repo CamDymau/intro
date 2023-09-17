@@ -14,6 +14,11 @@
                 sign in
             </div>
         </div>
+
+        <div class="error-block">
+            <span class="text-error">12312312</span>
+        </div>
+
         <form class="register-form">
             <input type="text" name="name" placeholder="Name" value required class="form-input text-gradient" max="100">
             <input type="text" name="second_name" placeholder="Second Name" class="form-input text-gradient" max="100">

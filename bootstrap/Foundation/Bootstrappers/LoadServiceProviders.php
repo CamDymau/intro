@@ -2,7 +2,7 @@
 
 namespace Boot\Foundation\Bootstrappers;
 
-use App\Providers\ServiceProvider;
+use App\Http\Providers\ServiceProvider;
 
 final class LoadServiceProviders extends Bootstrapper
 {

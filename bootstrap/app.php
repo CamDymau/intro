@@ -16,4 +16,6 @@ if (!function_exists('app'))
     }
 }
 
+$app->addErrorMiddleware(true,true,true);
+
 return HttpKernel::bootstrap($app)->getApp();
