@@ -19,10 +19,13 @@
             <span class="text-error">12312312</span>
         </div>
 
-        <form class="register-form">
+        <form class="register-form" enctype="multipart/form-data">
             <input type="text" name="name" placeholder="Name" value required class="form-input text-gradient" max="100">
             <input type="text" name="second_name" placeholder="Second Name" class="form-input text-gradient" max="100">
             <input type="text" name="login" placeholder="Login" required class="form-input text-gradient" max="50">
+
+            <input type="file" name="photo" placeholder="Photo" required class="form-input form-input-file text-gradient">
+
             <input type="date" name="birth_date" placeholder="dd.mm.yyyy" class="form-input text-gradient">
             <input type="password" name="password" placeholder="Password" required class="form-input text-gradient">
 

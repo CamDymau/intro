@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 use Phinx\Migration\AbstractMigration;
 
-final class Users extends AbstractMigration
+final class Photo extends AbstractMigration
 {
     /**
      * Change Method.
@@ -18,17 +18,15 @@ final class Users extends AbstractMigration
      */
     public function change(): void
     {
-        $table = $this->table('main_scheme.users');
+        $table = $this->table('main_scheme.user_photo');
 
         $table
-            ->addColumn('name', 'string', ['limit' => 100])
-            ->addColumn('second_name', 'string', ['limit' => 100, 'null' => true])
-            ->addColumn('login', 'string', ['limit' => 50])
-            ->addColumn('password', 'string')
-            ->addColumn('photoId', 'text', ['null' => true])
-            ->addColumn('birth_date', 'datetime')
+            ->addColumn('path', 'text')
+            ->addColumn('name', 'text')
+            ->addColumn('mime_type', 'text')
+            ->addColumn('size', 'integer')
+            ->addColumn('like_count', 'integer')
             ->addColumn('created_date', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
-            ->addIndex('login', ['unique' => true])
             ->create();
     }
 }

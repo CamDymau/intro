@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="fff">
-        home page
+        home page {{ $user->photo->mime_type }}
     </div>
 
 @endsection

@@ -46,11 +46,25 @@ a {
     height: 100%;
 }
 
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+
+.col {
+    flex: 1 0 0%;
+}
+
 .position-fixed {
     position: fixed;
 }
 
-.display-none{
+.display-none {
     display: none;
 }
 
@@ -93,6 +107,22 @@ a {
 
 .ml-30 {
     margin-left: 30px;
+}
+
+.ttu {
+    text-transform: uppercase;
+}
+
+.tfw {
+    font-weight: 800;
+}
+
+.tfs20 {
+    font-size: 20px;
+}
+
+.h100 {
+    height: 100%;
 }
 
 header {

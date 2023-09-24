@@ -1,7 +1,7 @@
 .main-auth-form {
     margin: 50px auto;
     width: 800px;
-    height: 600px;
+    height: 650px;
     border: 5px solid;
     border-image: var(--border-gradient-right) 8;
 }
@@ -36,6 +36,7 @@
 }
 
 .form-input, .form-button {
+    cursor: pointer;
     display: block;
     width: calc(100% - 40px);
     padding: 10px;
@@ -44,6 +45,10 @@
     border-image: var(--border-gradient-right) 8;
     font-size: 20px;
     font-weight: 800;
+}
+
+.form-input-file {
+    color: white;
 }
 
 .form-button {
@@ -58,6 +63,27 @@
     display: none;
 }
 
-.text-error{
+.text-error {
     font-size: 18px;
+}
+
+input::file-selector-button {
+    cursor: pointer;
+    background-image: var(--border-gradient-right);
+    background-position-x: 0%;
+    background-size: 200%;
+    border: 0;
+    padding: 0.5rem 0.5rem;
+    margin: 0 1rem 0 0;
+    text-shadow: 0 1px 1px white;
+    transition: all 0.25s;
+}
+
+input::file-selector-button:hover {
+    background-position-x: 100%;
+    transform: scale(1.1);
+}
+
+.btn-auth-header a {
+    padding: 10px;
 }

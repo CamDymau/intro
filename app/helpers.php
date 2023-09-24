@@ -28,7 +28,11 @@ if (!function_exists('base_path')) {
 if (!function_exists('session')) {
     function session($key = false, $value = false)
     {
-        if (!$value) {
+        if (!$key && !$value){
+            return [];
+        }
+
+        if (!$value && isset($_SESSION[$key])) {
             return $_SESSION[$key];
         }
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Models\User;
 use App\Support\View;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -15,6 +16,8 @@ final class MainController extends BaseController
 
     public function home(View $view)
     {
-        return $view('home.index');
+        $user = User::where(['login' => session('user')['login']])->with('photo')->first();
+
+        return $view('home.index', compact('user'));
     }
 }

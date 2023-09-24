@@ -3,6 +3,7 @@
 namespace App\Http\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 final class User extends Model
 {
@@ -12,8 +13,16 @@ final class User extends Model
         'second_name',
         'login',
         'password',
-        'photo',
+        'photo_id',
         'birth_date',
         'created_date',
     ];
+
+    /**
+     * @return BelongsTo
+     */
+    public function photo(): BelongsTo
+    {
+        return $this->belongsTo(Photo::class);
+    }
 }

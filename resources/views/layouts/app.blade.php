@@ -16,7 +16,32 @@
 <video class="bg-video position-fixed" preload="auto" src="{{ asset('video/puss.mp4') }}" poster="{{ asset('image/preload.png') }}" loop muted></video>
 
 <header>
-    some text here
+    <div class="container">
+        <div class="row h100 aic">
+            <div class="left-block col">
+                1
+            </div>
+            <div class="center-block col">
+                2
+            </div>
+            <div class="right-block col ttu tfw tfs20">
+                @if(session('user'))
+
+                    {{ session('user')['login'] }}
+                    <a href="/logout" class="text-gradient">
+                        logout
+                    </a>
+
+                @else
+                    <div class="btn-auth-header">
+                        <div class="sign-up text-gradient">
+                            <a href="/">sign up</a>
+                        </div>
+                    </div>
+                @endif
+            </div>
+        </div>
+    </div>
 </header>
 
 <div class="app">
@@ -28,7 +53,7 @@
 <footer>
     <div class="video position-fixed">
         <div class="flex ml-30">
-            <input class="volume-changer" type="range" min="0" max="10" value="5" step="0.1" />
+            <input class="volume-changer" type="range" min="0" max="10" value="5" step="0.1"/>
         </div>
         <div class="flex btn-player ml-30">
             <button class="btn-pause btn-player-gradient-border">
@@ -47,7 +72,7 @@
             <span class="current">0:00</span>
             /
             <span class="duration">0:00</span>
-            <input class="video-changer" type="range" min="0" max="100" value="0" step="0.1" />
+            <input class="video-changer" type="range" min="0" max="100" value="0" step="0.1"/>
         </div>
     </div>
 </footer>
